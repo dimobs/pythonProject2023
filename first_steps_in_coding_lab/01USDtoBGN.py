@@ -29,4 +29,7 @@ result = total_reading / day_count
 
 # print(total_reading)
 print(floor(result))
+
+
+
 print(floor(result))

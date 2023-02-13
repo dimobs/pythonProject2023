@@ -23,7 +23,8 @@
 # else:
 #     print('Odd')
 
-# smfl = float(input())
+# smfl = float(input(
+# ))
 # price = smfl * 7.61
 # disc = price * 0.18
 # total = price - disc
