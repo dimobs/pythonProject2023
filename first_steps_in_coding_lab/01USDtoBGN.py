@@ -17,19 +17,32 @@
 # print (lihva)
 # print(moth_lihva)
 # print(total)
+#
+# from math import floor
+#
+# page_count = int(input())
+# page_per_hr = int(input())
+# day_count = int(input())
+#
+# total_reading = page_count / page_per_hr
+# result = total_reading / day_count
+#
+# # print(total_reading)
+# print(floor(result))
+#
+#
+#
+# print(floor(result))
 
-from math import floor
+lenght_rank = int(input())
+with_rank = int(input())
+heigth_ranll = int(input())
+precent_ = float(input())/100
 
-page_count = int(input())
-page_per_hr = int(input())
-day_count = int(input())
+fill_of_rank = lenght_rank * heigth_ranll * with_rank
+obem = fill_of_rank / 1000
+space = obem * (1 - precent_)
 
-total_reading = page_count / page_per_hr
-result = total_reading / day_count
-
-# print(total_reading)
-print(floor(result))
-
-
-
-print(floor(result))
+print(fill_of_rank)
+print(obem)
+print(space)
