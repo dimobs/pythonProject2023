@@ -34,15 +34,41 @@
 #
 # print(floor(result))
 
-lenght_rank = int(input())
-with_rank = int(input())
-heigth_ranll = int(input())
-precent_ = float(input())/100
+# lenght_rank = int(input())
+# with_rank = int(input())
+# heigth_ranll = int(input())
+# precent_ = float(input())/100
+#
+# fill_of_rank = lenght_rank * heigth_ranll * with_rank
+# obem = fill_of_rank / 1000
+# space = obem * (1 - precent_)
+#
+# print(fill_of_rank)
+# print(obem)
+# print(space)
 
-fill_of_rank = lenght_rank * heigth_ranll * with_rank
-obem = fill_of_rank / 1000
-space = obem * (1 - precent_)
 
-print(fill_of_rank)
-print(obem)
-print(space)
+# from math import pi
+#
+# figure = input()
+# area = 0
+#
+# if figure == 'square':
+#     a = float(input())
+#     area = a * a
+#
+# elif figure == 'rectangle':
+#     a = float(input())
+#     b = float(input())
+#     area = a * b
+#
+# elif figure == 'circle':
+#     r = float(input())
+#     area = pi * (r ** 2)
+#
+# elif figure == 'triangle':
+#     a = float(input())
+#     b = float(input())
+#     area = 1/ 2 * a * b
+#
+# print(f'{area:.3f}')
