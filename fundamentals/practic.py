@@ -10,8 +10,8 @@ def repeat(word, times):
 text = input()
 n = int(input())
 
-# result = repeat(text, n)
-# print(result)
+result = repeat(text, n)
+print(result)
 
-result = lambda word, times: word * times
-print(result(text, n))
+# result = lambda word, times: word * times
+# print(result(text, n))
