@@ -7,5 +7,13 @@
 # for num in filtered:
 #     print(num)
 
-nums = [ "even" if num % 2 == 0 else 'odd' for num in range(1, 11) ]
-print(nums)
+# nums = [ "even" if num % 2 == 0 else 'odd' for num in range(1, 11) ]
+# print(nums)
+
+text = input()
+result = []
+
+for char in text:
+    if char.lower() not in ['a', 'o', 'u', 'e', 'i']:
+        result.append(char)
+print(result)
