@@ -18,6 +18,18 @@
 #         result.append(char)
 # print(result)
 
-text = input()
-result = [char for char in text if char.lower() not in ['a', 'o', 'u', 'e', 'i']]
-print("".join(result))
+# text = input()
+# result = [char for char in text if char.lower() not in ['a', 'o', 'u', 'e', 'i']]
+# print("".join(result))
+
+# entries = [['man', 'thats'],['right', 'awesome']]
+#
+# element = [x for i in entries for x in i]
+# print(element)
+
+nums = [1, 2, 30, -4, 5]
+
+print(nums)
+new_ = sorted(nums, key=lambda x: -x)
+print(nums)
+print(new_)
