@@ -24,7 +24,8 @@
 
 # entries = [['man', 'thats'],['right', 'awesome']]
 #
-# element = [x for i in entries for x in i]
+# element = [x for i in
+# for x in i]
 # print(element)
 
 nums = [1, 2, 30, -4, 5]
