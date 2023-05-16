@@ -14,7 +14,7 @@
 # emails = []
 # data = input()
 # while data != "Stop":
-#      sender = resiver, content = data.split()
+#      sender, resiver, content = data.split()
 #      email = Email(sender, resiver, content)
 #      emails.append(email)
 #      data= input()
@@ -24,8 +24,8 @@
 # for index, email in enumerate(emails):
 #     if index in indexes:
 #         emails[index].send()
-#     print(f"{email.sender} says to {email.resive}: S ent: True)
-#
+#     print(f"{email.sender} says to {email.resive}: S ent: True")
+
 
 # class Zoo:
 #     __animails = 0
@@ -81,15 +81,53 @@
 # print(comment.content)
 # print(comment.likes)
 
-class Party:
-    def __init__(self):
-        self.people = []
+# class Party:
+#     def __init__(self):
+#         self.people = []
+#
+# party = Party()
+# line = input()
+# while line != "End":
+#     party.people.append(line)
+#     line = input()
+#
+# print(f"Going: {', '.join(party.people)}")
+# print(f"Total: {len(party.people)}")
 
-party = Party()
+class Email:
+    def __init__(self, sender, receiver, content):
+        self.sender = sender
+        self.receiver = receiver
+        self.content = content
+        self.is_sent = False
+
+    def send(self):
+            self.is_sent = True
+
+    def get_info(self):
+            return f"{self.sender} says to {self.receiver}: "\
+                    f"{self.content}. Sent: {self.is_sent}"
+
+emails = []
+
 line = input()
-while line != "End":
-    party.people.append(line)
+while line != "Stop":
+    sender, receiver, content = line.split(" ")
+    email = Email(sender, receiver, content)
+    emails.append(email)
     line = input()
 
-print(f"Going: {', '.join(party.people)}")
-print(f"Total: {len(party.people)}")
+goSend = [int(el) for el in input().split(', ')]
+
+for x in goSend:
+    print(emails[0].content)
+    print(emails[x])
+
+
+    emails[x].send()
+
+for email in emails:
+    if email.is_sent == True:
+        print(email.get_info())
+
+
