@@ -94,40 +94,89 @@
 # print(f"Going: {', '.join(party.people)}")
 # print(f"Total: {len(party.people)}")
 
-class Email:
-    def __init__(self, sender, receiver, content):
-        self.sender = sender
-        self.receiver = receiver
-        self.content = content
-        self.is_sent = False
+# class Email:
+#     def __init__(self, sender, receiver, content):
+#         self.sender = sender
+#         self.receiver = receiver
+#         self.content = content
+#         self.is_sent = False
+#
+#     def send(self):
+#             self.is_sent = True
+#
+#     def get_info(self):
+#             return f"{self.sender} says to {self.receiver}: "\
+#                     f"{self.content}. Sent: {self.is_sent}"
+#
+# emails = []
+#
+# line = input()
+# while line != "Stop":
+#     sender, receiver, content = line.split(" ")
+#     email = Email(sender, receiver, content)
+#     emails.append(email)
+#     line = input()
+#
+# goSend = [int(el) for el in input().split(', ')]
+#
+# for x in goSend:
+#     print(emails[0].content)
+#     print(emails[x])
+#
+#
+#     emails[x].send()
+#
+# for email in emails:
+#     if email.is_sent == True:
+#         print(email.get_info())
 
-    def send(self):
-            self.is_sent = True
+class Zoo:
+    __animals = 0
 
-    def get_info(self):
-            return f"{self.sender} says to {self.receiver}: "\
-                    f"{self.content}. Sent: {self.is_sent}"
+    def __init__(self, name):
+        self.name = name
+        self.mammals = []
+        self.fishes = []
+        self.birds = []
 
-emails = []
+    def add_animal(self, species, name):
+        if species == 'mammal':
+           self.mammals.append(name)
+        elif species == 'fishes':
+            self.fishes.append(name)
+        elif species == 'birds':
+            self.birds.append(name)
 
-line = input()
-while line != "Stop":
-    sender, receiver, content = line.split(" ")
-    email = Email(sender, receiver, content)
-    emails.append(email)
-    line = input()
+        Zoo._Zoo__animals += 1
 
-goSend = [int(el) for el in input().split(', ')]
+    def get_info(self, species):
+            outPut = ""
+            if species == 'mammal':
+               outPut = f"Mammals in {self.name}: {self.mammals}"
+            elif species == 'fishes':
+               outPut = f"Fishes in {self.name}: {self.fishes}"
+            elif species == 'birds':
+                outPut = f"Birds in {self.name}: {self.birds}"
 
-for x in goSend:
-    print(emails[0].content)
-    print(emails[x])
+            return f"{outPut}\nTotal animals: {Zoo._Zoo__animals}"
 
 
-    emails[x].send()
+name = input()
+numbersForAdded = int(input())
 
-for email in emails:
-    if email.is_sent == True:
-        print(email.get_info())
+zoo = Zoo(name)
+for i in range(1, numbersForAdded +1):
+    species, kind = input().split(" ")
+    zoo.add_animal(species, kind)
+
+sortBy = input()
+
+print(zoo.get_info(sortBy))
+
+
+
+
+
+
 
 
