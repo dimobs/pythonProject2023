@@ -130,53 +130,72 @@
 #     if email.is_sent == True:
 #         print(email.get_info())
 
-class Zoo:
-    __animals = 0
-
-    def __init__(self, name):
-        self.name = name
-        self.mammals = []
-        self.fishes = []
-        self.birds = []
-
-    def add_animal(self, species, name):
-        if species == 'mammal':
-           self.mammals.append(name)
-        elif species == 'fishes':
-            self.fishes.append(name)
-        elif species == 'birds':
-            self.birds.append(name)
-
-        Zoo._Zoo__animals += 1
-
-    def get_info(self, species):
-            outPut = ""
-            if species == 'mammal':
-               outPut = f"Mammals in {self.name}: {self.mammals}"
-            elif species == 'fishes':
-               outPut = f"Fishes in {self.name}: {self.fishes}"
-            elif species == 'birds':
-                outPut = f"Birds in {self.name}: {self.birds}"
-
-            return f"{outPut}\nTotal animals: {Zoo._Zoo__animals}"
-
-
-name = input()
-numbersForAdded = int(input())
-
-zoo = Zoo(name)
-for i in range(1, numbersForAdded +1):
-    species, kind = input().split(" ")
-    zoo.add_animal(species, kind)
-
-sortBy = input()
-
-print(zoo.get_info(sortBy))
-
-
+# class Zoo:
+#     __animals = 0
+#
+#     def __init__(self, name):
+#         self.name = name
+#         self.mammals = []
+#         self.fishes = []
+#         self.birds = []
+#
+#     def add_animal(self, species, name):
+#         if species == 'mammal':
+#            self.mammals.append(name)
+#         elif species == 'fishes':
+#             self.fishes.append(name)
+#         elif species == 'birds':
+#             self.birds.append(name)
+#
+#         Zoo._Zoo__animals += 1
+#
+#     def get_info(self, species):
+#             outPut = ""
+#             if species == 'mammal':
+#                outPut = f"Mammals in {self.name}: {self.mammals}"
+#             elif species == 'fishes':
+#                outPut = f"Fishes in {self.name}: {self.fishes}"
+#             elif species == 'birds':
+#                 outPut = f"Birds in {self.name}: {self.birds}"
+#
+#             return f"{outPut}\nTotal animals: {Zoo._Zoo__animals}"
+#
+#
+# name = input()
+# numbersForAdded = int(input())
+#
+# zoo = Zoo(name)
+# for i in range(1, numbersForAdded +1):
+#     species, kind = input().split(" ")
+#     zoo.add_animal(species, kind)
+#
+# sortBy = input()
+#
+# print(zoo.get_info(sortBy))
 
 
+class Circle:
+    __pi = 3.14
+
+    def __init__(self, diameter):
+        self.diameter = diameter
+        self.radius = diameter / 2
+
+    def calculate_circumference(self):
+        return Circle.__pi * self.diameter
+
+    def calculate_area(self):
+        return Circle.__pi * self.radius * self.radius
+
+    def calculate_area_of_sector(self, angle):
+        return Circle.__pi * (angle/360) * self.radius * self.radius
 
 
+circle = Circle(10)
+angle = 5
+
+print(f"{circle.calculate_circumference():.2f}")
+print(f"{circle.calculate_area():.2f}")
+print(f"{circle.calculate_area_of_sector(angle):.2f}")
 
 
