@@ -1,10 +1,11 @@
 line = input().split(', ')
-my_dict = {}
+obj = {}
 
 newLine = [(ord(x)) for x in line]
 
 for key, value in enumerate(newLine):
-    if not line[key] in my_dict.keys():
-        my_dict[line[key]] = value
-
+    if line[key] in my_dict[line[key]]:
+        line[key]: value}r
 print(my_dict)
+
+# newlist = [x for x in fruits if "a" in x]
