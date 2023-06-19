@@ -5,6 +5,7 @@ people = deque()
 water_quantity = int(input())
 
 name = input()
+
 while name != "Start":
     people.append(name)
     name = input()
