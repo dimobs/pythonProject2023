@@ -4,3 +4,4 @@ print(my_tuples)
 
 my_list = set(my_list)
 print(my_list)
+
