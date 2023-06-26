@@ -1,5 +1,5 @@
 rows = int(input())
-matrix = []
+    matrix = []
 primary = []
 secondary = []
 primary_sum = 0
