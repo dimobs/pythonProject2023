@@ -74,6 +74,7 @@ for command in commands:
 
     check_player_alive(player_row, player_col)
 
+print
     5
     6
     .....P
