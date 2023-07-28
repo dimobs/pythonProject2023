@@ -1,0 +1,3 @@
+.txt
+- - - 01text.txt
+- - - output.txt
