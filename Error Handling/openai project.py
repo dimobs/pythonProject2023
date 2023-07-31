@@ -10,7 +10,7 @@ import tkinter as tk
 from io import BytesIO
 from PIL import Image, ImageTk
 
-openai.api_key = "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"
+# openai.api_key = "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"
 
 def display_image(image_url):
     with urllib.request.urlopen(image_url) as url:

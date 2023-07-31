@@ -1,22 +1,24 @@
 import speech_recognition as sr
-
 from collections import deque
 from pyfiglet import Figlet
 
 
 def get_name(player_number):
-    while True:
-        with sr.Microphone() as source:
-            r = sr.Recognizer()
-            print(f"Player {player_number} please say your name: ")
+    player_name = input(f"Player {player_number} please enter your name: ")
+    return player_name
+    # while True:
+        # with sr.Microphone() as source:
+        #     r = sr.Recognizer()
+        #     print(f"Player {player_number} please say your name: ")
+        #
+        #     audio = r.record(source, duration=3)
+        #     print("Recognizing...")
 
-            audio = r.record(source, duration=3)
-            print("Recognizing...")
+            # try:
+                # return r.recognize_google(audio)
 
-            try:
-                return r.recognize_google(audio)
-            except sr.exceptions.UnknownValueError:
-                print("Please say your name again!")
+            # except sr.exceptions.UnknownValueError:
+                # print("Please say your name again!")
 
 
 def check_for_win():
