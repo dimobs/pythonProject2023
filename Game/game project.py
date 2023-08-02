@@ -61,7 +61,7 @@ player_one_symbol = Fore.YELLOW + "1" + Fore.RESET
 player_two_symbol = Fore.RED + "2" + Fore.RESET
 
 turns = deque([[1, player_one_symbol], [2, player_two_symbol]])
-
+print(turns)
 win = False
 
 direction = (

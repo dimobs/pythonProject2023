@@ -1,0 +1,7 @@
+SIZE = 8
+
+board = []
+position = [[], []]
+
+for row in range(SIZE):
+    board.append(input().split())
