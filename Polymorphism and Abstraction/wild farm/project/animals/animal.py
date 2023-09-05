@@ -3,12 +3,12 @@ from typing import List
 from project.food import Food
 
 
-class Animal(ABC):
+class Animal(ABC): #the class should be abstract
 
-    def __init__(self, name: str, weight: float):
+    def __init__(self, name: str, weight: float): #attributes:
         self.name = name
         self.weight = weight
-        self.food_eaten = 0
+        self.food_eaten = 0 #by default
 
     @property
     @abstractmethod
@@ -32,9 +32,9 @@ class Animal(ABC):
         self.food_eaten += food.quantity
 
 
-class Bird(Animal, ABC):
+class Bird(Animal, ABC): #inherit from the Animal, class should be abstract
 
-    def __init__(self, name: str, weight: float, wing_size: float):
+    def __init__(self, name: str, weight: float, wing_size: float): #should have wing_size (float)
         super().__init__(name, weight)
         self.wing_size = wing_size
 
