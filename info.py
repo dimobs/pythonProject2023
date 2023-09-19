@@ -9,7 +9,9 @@
 #Dyp-typeing caares is there a method that we can use
 
 #class Class:
-    #def __init__(self, name: str): #name is dependency
+    #_LOCAL_ATRIBUTES = [] class atributes its cvalificate as DATA and methods
+
+    #def __init__(self, name: str): #name is dependency def - method
     #self.name = name atributes
 
     #def methods(self): method
@@ -29,7 +31,13 @@
     # !!! ditails depends on abstraction
     # replace methods isinstance with baseclass
 
+#iterators - It's an object that we can iterate over __iter__ and __next__
 
 
+#testing:
+# #unit tests, - pattern matching tripple A pattern: range - we creat information, act -calling method, assert - expected result
+# #intigrations tests, test flow, you can modify
+# end to end tests - QA automatically clicks on the program (usually can be bot)
+#mooking tests - third part apis 
 
 

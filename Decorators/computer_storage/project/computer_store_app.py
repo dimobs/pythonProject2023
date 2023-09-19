@@ -18,6 +18,7 @@ class ComputerStoreApp:
     def build_computer(self, type_computer: str, manufacturer: str, model: str, processor: str, ram: int) -> str:
         try:
             computer = self.VALID_COMPUTERS[type_computer](manufacturer, model)
+            print(self.VALID_COMPUTERS[type_computer](manufacturer, model))
         except KeyError:
             raise ValueError(f"{type_computer} is not a valid type computer!")
 
